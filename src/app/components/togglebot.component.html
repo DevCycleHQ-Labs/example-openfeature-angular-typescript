@@ -1,0 +1,39 @@
+<div class="App-content">
+  <ng-container 
+    *booleanFeatureFlag="'togglebot-wink'; 
+    default: false; 
+    let shouldWink;
+    else: winkDisabled">
+    <ng-container 
+      *stringFeatureFlag="'togglebot-speed'; 
+      default: 'off'; 
+      let spinSpeed">
+      <div class="ToggleBot-message">"{{ getMessage(spinSpeed) }}"</div>
+      <img
+        [src]="getImageSource(spinSpeed, true)"
+        [class]="getClassNames(spinSpeed)"
+        alt="togglebot"
+      />
+      <div class="ToggleBot-variation">
+        Serving Variation: <b>"{{ variationName }}"</b>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>
+
+<ng-template #winkDisabled>
+  <ng-container 
+    *stringFeatureFlag="'togglebot-speed'; 
+    default: 'off'; 
+    let spinSpeed">
+    <div class="ToggleBot-message">"{{ getMessage(spinSpeed) }}"</div>
+    <img
+      [src]="getImageSource(spinSpeed, false)"
+      [class]="getClassNames(spinSpeed)"
+      alt="togglebot"
+    />
+    <div class="ToggleBot-variation">
+      Serving Variation: <b>"{{ variationName }}"</b>
+    </div>
+  </ng-container>
+</ng-template> 

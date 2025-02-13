@@ -1,0 +1,62 @@
+@import './App.css'; 
+
+.App-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+  padding: 20px;
+}
+
+.ToggleBot-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.ToggleBot-message {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+.ToggleBot-variation {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* Spin animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.spin-slow {
+  animation: spin 20s linear infinite;
+}
+
+.spin-fast {
+  animation: spin 5s linear infinite;
+}
+
+.spin-off-axis {
+  animation: spin 1s linear infinite;
+  transform-origin: 70% 70%;
+}
+
+.spin-surprise {
+  animation: spin-reverse 0.5s linear infinite;
+} 
