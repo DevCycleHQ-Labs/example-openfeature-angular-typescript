@@ -1,11 +1,11 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { OpenFeature, OpenFeatureModule } from "@openfeature/angular-sdk";
-import DevCycleProvider from "@devcycle/openfeature-web-provider";
+import DevCycleAngularProvider from "@devcycle/openfeature-angular-provider";
 import { environment } from "../environments/environment";
 import { AppComponent } from "./app.component";
 
-const devCycleProvider = new DevCycleProvider(
+const devCycleProvider = new DevCycleAngularProvider(
   environment.DEVCYCLE_CLIENT_SDK_KEY,
   {
     logLevel: "debug",
