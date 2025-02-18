@@ -25,3 +25,6 @@ yarn-error.log*
 
 .idea/
 /.angular
+
+# Environment files
+src/assets/env.js
