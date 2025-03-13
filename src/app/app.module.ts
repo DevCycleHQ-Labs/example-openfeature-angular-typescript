@@ -9,6 +9,8 @@ const devCycleProvider = new DevCycleAngularProvider(
   environment.DEVCYCLE_CLIENT_SDK_KEY,
   {
     logLevel: "debug",
+    // Controls the interval between flushing events to the DevCycle servers
+    eventFlushIntervalMS: 1000,
   }
 );
 
